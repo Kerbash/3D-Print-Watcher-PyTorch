@@ -12,8 +12,9 @@ class ImageDetection:
     def __init__(self, device = 'cpu'):
         # get the current module path
         root = str(Path(__file__).parent.resolve())
-        # get YOLO path
-        rm_path = root + "\\ultralytics_yolov5_master"
+        # get YOLO path ------------------ (if Yolov5 name changed modify here) ----------------
+        rm_path = root + "\\yolov5_module"
+        # path to the failedDetector module
         fm_path = root + "\\failDecModule.pt"
 
         self.recMod = recMod(rm_path, root + "\\yolo3Dprint.pt", device)
